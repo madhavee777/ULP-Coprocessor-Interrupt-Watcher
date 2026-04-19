@@ -3,7 +3,7 @@
 #include "ulp_lp_core_gpio.h"
 #include "ulp_lp_core_utils.h"
 
-#define WAKE_PIN GPIO_NUM_4
+#define WAKE_PIN 4
 
 int main(void) {
     // Configure the pin for the LP core
@@ -16,7 +16,6 @@ int main(void) {
             
             // Wake up the Big Brain
             ulp_lp_core_wakeup_main_processor();
-            break;
         }
         
         // Sleep for 100ms to save power between checks

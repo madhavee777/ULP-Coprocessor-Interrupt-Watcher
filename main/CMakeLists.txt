@@ -1,2 +1,6 @@
+# main/CMakeLists.txt
 idf_component_register(SRCS "main.c"
-                    INCLUDE_DIRS ".")
+                       INCLUDE_DIRS ""
+                       REQUIRES ulp)
+
+ulp_embed_binary(ulp_app "ulp/ulp_main.c" "main.c")
